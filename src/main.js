@@ -12,10 +12,19 @@ import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // 3. 导入全局样式表
 import '@/assets/global.less'
+// 导入富文本编辑器
+import VueQuillEditor from 'vue-quill-editor'
+// 导入富文本编辑器的样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+// 全局注册富文本编辑器
+Vue.use(VueQuillEditor)
 // 1.2 把axios挂载到Vue的原型对象中
 Vue.prototype.$http = axios
 // 1.3 设置axios基地址
-axios.defaults.baseURL = 'http://www.liulongbin.top:3008'
+axios.defaults.baseURL = 'http://big-event-vue-api-t.itheima.net'
 Vue.config.productionTip = false
 // 设置拦截器
 // 添加请求拦截器

@@ -11,6 +11,12 @@ import  Home from '@/views/Menus/Home/Home.vue'
 import UserInfo from '@/views/Menus/User/UserInfo.vue'
 // 导入头像模块
 import UserAvatar from '@/views/Menus/User/UserAvatar'
+// 导入重置密码模块
+import UserPwd from '@/views/Menus/User/UserPwd.vue'
+// 导入文章分类模块
+import ArtCate from '@/views/Menus/Article/ArtCate.vue'
+// 导入文章列表模块
+import ArtList from '@/views/Menus/Article/ArtList.vue'
 // 把下面的代码粘贴到路由模块中对应的位置，即可防止路由报错的问题
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
@@ -29,7 +35,10 @@ const routes = [
   children: [
     { path: 'home', component: Home },
     { path: 'user-info', component: UserInfo },
-    { path: 'user-avatar', component: UserAvatar }
+    { path: 'user-avatar', component: UserAvatar },
+    { path: 'user-pwd', component: UserPwd},
+    { path: 'art-cate', component: ArtCate},
+    { path: 'art-list', component: ArtList}
   ]
 }
 ]
